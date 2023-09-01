@@ -1,0 +1,21 @@
+{
+	"short_name": "Gratis Library",
+	"name": "Gratis Library",
+	"start_url": "https://gratislibrary.com",
+	"description": "Curated list of free eBooks and Podcasts for Web designers and developers. An interesting mix of full-stack coding, front-end design and business content.",
+	"icons": [
+		{
+			"src": "images/droidx192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "images/droidx512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#ffffff",
+	"background_color": "#ffffff",
+	"display": "standalone"
+}

@@ -1,0 +1,374 @@
+@font-face {
+	font-family:'Merriweather';
+	src:local('Merriweather Regular'),
+		url('fonts/Merriweather-Regular.woff2') format('woff2'),
+		url('fonts/Merriweather-Regular.woff') format('woff');
+	font-display: swap;
+}
+@font-face {
+	font-family:'Merriweather';
+	src:local('Merriweather Bold'),
+		url('fonts/Merriweather-Bold.woff2') format('woff2'),
+		url('fonts/Merriweather-Bold.woff') format('woff');
+	font-display: swap;
+	font-weight: bold;
+}
+@font-face {
+	font-family:'Merriweather';
+	src:local('Merriweather Italic'),
+		url('fonts/Merriweather-Italic.woff2') format('woff2'),
+		url('fonts/Merriweather-Italic.woff') format('woff');
+	font-display: swap;
+	font-style: italic;
+}
+@media screen {
+	/* App Rendering Component */
+	.hide, .special,
+	#eBooks:not(:checked) ~ .eBooks, #client:not(:checked) ~ .client, #ux:not(:checked) ~ .ux, #server:not(:checked) ~ .server,
+	#podcasts:not(:checked) ~ .podcasts, #ongoing:not(:checked) ~ .ongoing, #archive:not(:checked) ~ .archive,
+	#html:not(:checked) ~ .html, #css:not(:checked) ~ .css, #js:not(:checked) ~ .js, #frameworks:not(:checked) ~ .frameworks, #other:not(:checked) ~ .other,
+	#ui:not(:checked) ~ .ui, #uxd:not(:checked) ~ .uxd, #a11y:not(:checked) ~ .a11y, #apps:not(:checked) ~ .apps,
+	#cli:not(:checked) ~ .cli, #git:not(:checked) ~ .git, #php:not(:checked) ~ .php, #python:not(:checked) ~ .python, #ruby:not(:checked) ~ .ruby, #net:not(:checked) ~ .net, #perl:not(:checked) ~ .perl, #db:not(:checked) ~ .db, #other2:not(:checked) ~ .other2,
+	#cliento:not(:checked) ~ .cliento, #uxo:not(:checked) ~ .uxo, #servero:not(:checked) ~ .servero, #businesso:not(:checked) ~ .businesso, #clienta:not(:checked) ~ .clienta, #uxa:not(:checked) ~ .uxa, #servera:not(:checked) ~ .servera, #businessa:not(:checked) ~ .businessa { height: 1px; left: -1000px; overflow: hidden; position: absolute; top: -1px; width: 1px; }
+	.t_show:target { height: auto; left: auto; overflow: auto; position: static; top: auto; width: auto; }
+	.html, .css, .js, .frameworks, .other, .ui, .uxd, .a11y, .apps, .cli, .git, .php, .python, .ruby, .net, .perl, .db, .other2, .cliento, .uxo, .servero, .businesso, .clienta, .uxa, .servera, .businessa {
+		content-visibility: auto; }
+}
+@media screen {
+	::selection { background-color: #333333; color: #ffffff; }
+	.show, .hide, .show:target ~ .org { height: 1px; left: -1000px; overflow: hidden; position: absolute; top: -1px; width: 1px; }
+	.show:target, .t_show:target { height: auto; left: 0; overflow: auto; position: relative; top: 0; width: 100%; }
+	.header, .footer, .main {
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		animation-name: fadeIn; }
+	.eBooks, .error-head, .headline, .podcasts, .subheading, .th {
+		background-color: #8d3239; }
+	.special:checked + .format {
+		background-color: #d8dde0; }
+	.body {
+		background-color: #df5e5e }
+	.db tr:nth-child(even) {
+		background-color: #eeeeee; }
+	.db tr:hover {
+		background-color: #b64646; }
+	.eBooks article, .main, .podcasts article {
+		background-color: #ffffff;
+		text-align: left; }
+	.table {
+		border-collapse: collapse;
+		contain: strict;
+		width: 100%; }
+	.format {
+		border-color: #333333;
+		border-style: solid;
+		border-bottom-width: 2px;
+		border-left-width: 1px;
+		border-right-width: 1px;
+		border-top-width: 2px;
+		cursor: pointer;
+		display: inline-block;
+		margin-bottom: 0;
+		margin-left: -0.25em;
+		padding: 1em;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none; }
+	.first {
+		border-bottom-left-radius: 0.5em;
+		border-left-width: 2px; }
+	.last {
+		border-bottom-right-radius: 0.5em;
+		border-right-width: 2px; }
+	.line {
+		border-color: #8d3239;
+		border-style: solid; }
+	.special:not(:checked) ~ .specs {
+		border-radius: 0.5em; }
+	.first, .special:checked ~ .specs {
+		border-top-left-radius: 0.5em; }
+	.last, .special:checked ~ .specs {
+		border-top-right-radius: 0.5em; }
+	.main {
+		clear: both; }
+	.build a, .copyright a, .Name {
+		color: inherit; }
+	.special:checked + .format {
+		color: #333333; }
+	.eBooks .format, .error-head, .podcasts .format, .subheading, .th {
+		color: #ffffff; }
+	.copyright:before {
+		content: "\00a9";
+		padding-right: 0.2em;
+		vertical-align: -0.2em; }
+	.subtitle span, .Name {
+		display: block; }
+	.footer {
+		display: flex; }
+	.build, .copyright {
+		flex-basis: 50%; }
+	.logo {
+		float: left; }
+	.answer, .build, .copyright, .Episodes, .error-head, .error-sub, .error-txt, .format, .Formats, .heading, .Length, .Name, .Pages, .Publisher, .question, .subheading, .Subscribe, .subtitle, .th, .txt, .Year {
+		font-family: Merriweather, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+	.subtitle {
+		font-size: 1.1em;
+		font-style: italic;
+		letter-spacing: 1px; }
+	.error-sub {
+		font-size: 2em; }
+	.heading {
+		font-size: 3em; }
+	.question {
+		font-weight: bold; }
+	.logo {
+		height: 100px;
+		margin-right: 1em;
+		width: 100px; }
+	.sub {
+		height: 1.5em;
+		margin-right: 0.2em;
+		width: 1.5em; }
+	.svg {
+		height: 3em;
+		margin-right: 0.5em;
+		vertical-align: middle;
+		width: 3em; }
+	.faq, .txt {
+		line-height: 1.5;
+		width: 50%; }
+	.body, .error-head, .heading, .subtitle, .subheading {
+		margin: 0; }
+	.faq {
+		margin: 0 auto;
+		overflow: auto; }
+	.answer, .header, .question {
+		margin-bottom: 1em; }
+	.faq, .footer, .header, .txt {
+		margin-left: auto;
+		margin-right: auto; }
+	.answer {
+		margin-left: 0; }
+	.format {
+		margin-top: 0; }
+	.answer, .eBooks, .header .question {
+		margin-top: 0.5em; }
+	.header, .faq {
+		margin-top: 1em; }
+	.error-head, .subheading, .th {
+		padding-bottom: 0.5em; }
+	.Name, .t_show {
+		padding-bottom: 1em; }
+	.Episodes, .Formats, .Length, .Name, .Pages, .Publisher, .Subscribe, .th, .Year {
+		padding-left: 1em;
+		padding-right: 1em; }
+	.error-head, .subheading, .th {
+		padding-top: 0.5em; }
+	.eBooks, .Name, .podcasts {
+		padding-top: 1em; }
+	.org > .first, .org > .last {
+		position: absolute;
+		top: 1.5em; }
+	.th {
+		position: sticky;
+  		top: 0em; }
+	.org > .last {
+		right: 10%; }
+	.org > .first {
+		right: calc(10% + 161px); }
+	.eBooks, .error-head, .error-sub, .error-txt, .podcasts, .subheading {
+		text-align: center; }
+	.build {
+		text-align: right; }
+	.footer, .header {
+		width: 80%; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media screen and (max-width: 1100px) {
+	.faq, .txt {
+		width: 60%; }
+}
+@media screen and (max-width: 1000px) {
+	.logo {
+		margin-left: 0.5em; }
+	.org > .last {
+		right: 1.2em; }
+	.org > .first {
+		right: calc(1.2em + 161px); }
+	.build, .copyright {
+		text-align: center; }
+	.faq, .txt {
+		width: 80%; }
+	.footer, .header {
+		width: 100%; }
+}
+@media screen and (min-width: 901px) {
+	.split1 {
+		display: none; }
+}
+@media screen and (max-width: 900px) {
+	label[for="ruby"] {
+		border-bottom-right-radius: 0.5em;
+		border-right-width: 2px;
+		border-top-right-radius: 0.5em; }
+	label[for="net"] {
+		border-bottom-left-radius: 0.5em;
+		border-left-width: 2px;
+		border-top-left-radius: 0.5em;
+		margin-top: 1em; }
+}
+@media screen and (max-width: 825px) {
+	.heading {
+		font-size: 2em; }
+	.subtitle {
+		font-size: 0.9em; }
+	.logo {
+		height: 75px;
+		width: 75px; }
+	.svg {
+		height: 2em;
+		width: 2em; }
+	.org > .first {
+		right: calc(1.2em + 145px); }
+	.org > .first, .org > .last {
+		top: 1.2em; }
+}
+@media screen and (max-width: 725px) {
+	.Episodes::before, .Formats::before, .Length::before, .Pages::before, .Publisher::before, .Subscribe::before, .Year::before {
+		content: attr(class) ": ";
+		font-weight: bold; }
+	.Subscribe::before { 
+		display: block; }
+	.db tr {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 1em; }
+	.Episodes, .Formats, .Length, .Name, .Pages, .Publisher, .Subscribe, .Year {
+		flex-basis: 50%; }
+	.headline {
+		height: 1px; left: -1000px; overflow: hidden; position: absolute; top: -1px; width: 1px; }
+	.faq, .txt {
+		box-sizing: border-box;
+		padding-left: 2em;
+		padding-right: 2em;
+		width: 100%; }
+}
+@media screen and (max-width: 675px) {
+	.logo {
+		left: 50%;
+		margin-left: -175px;
+		position: absolute; }
+	.org > label {
+		margin-bottom: 1em; }
+	.heading, .subtitle {
+		margin-left: calc(75px + 1em);
+		text-align: center; }
+	.org > .first, .org > .last {
+		position: static; }
+	.org {
+		text-align: center; }
+}
+@media screen and (max-width: 500px) {
+	.footer {
+		flex-basis: 100%;
+		flex-direction: column-reverse; }
+}
+@media screen and (max-width: 375px) {
+	.heading {
+		font-size: 1.5em; }
+	.subtitle {
+		font-size: 0.75em; }
+	.logo {
+		height: 50px;
+		margin-left: -140px;
+		margin-top: 0.4em;
+		width: 50px; }
+	.heading, .subtitle {
+		margin-left: 75px; }
+	.format {
+		padding-left: 0.75em;
+		padding-right: 0.75em; }
+}
+@media (prefers-color-scheme: dark) {
+	.body {
+		background-color: #121212; }
+	.eBooks, .error-head, .headline, .podcasts, .subheading, .th {
+		background-color: #222222; }
+	.db tr, .special:checked + .format, .t_show {
+		background-color: #383838; }
+	.db tr:nth-child(even) {
+		background-color: #575757; }
+	.db tr:hover {
+		background-color: #b64646; }
+	.format {
+		border-color: #575757; }
+	.line {
+		border-color: #121212; }
+	.db tr, .format, .heading, .special:checked + .format, .subtitle, .t_show {
+		color: #dfdfdf; }
+	.svg {
+		fill: #ffffff; }
+}
+@media (prefers-reduced-motion: reduce), (update: slow) {
+	*:not(.safe-animation),
+	*:not(.safe-animation)::before,
+	*:not(.safe-animation)::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-delay: -1ms !important;
+		transition-duration: 1ms !important;
+	}
+}
+@media print {
+	.format, .logo, .special {
+		display: none; }
+	.answer, .build, .copyright, .Episodes, .error-head, .error-sub, .error-txt, .format, .Formats, .heading, .Length, .Name, .Pages, .Publisher, .question, .subheading, .Subscribe, .subtitle, .th, .txt, .Year {
+		font-family: Constantia, Palatino, 'Book Antiqua', 'Palatino Linotype', serif; }
+	.sub {
+		height: 25px;
+		width: 25px; }
+	.Name {
+		font-weight: bold; }
+	.answer a, .footer a, .Name, .txt a {
+		color: inherit;
+		text-decoration: none; }
+	.Name::after {
+		content: attr(href);
+		display: block;
+		font-weight: normal; }
+	.copyright:before {
+		content: "\00a9";
+		padding-right: 0.2em; }
+	.build a::after {
+		content: ": " attr(href); }
+	.build, .copyright, .footer {
+		display: flex; }
+	.build, .copyright {
+		padding-left: 1em;
+		padding-right: 1em; }
+	.footer {
+		justify-content: center; }
+	.subtitle {
+		font-style: italic; }
+	.question {
+		font-weight: bold;
+		margin-bottom: 1em;
+		margin-top: 1em; }
+	.answer {
+		margin-left: 0; }
+	.Name, .Name::after {
+		overflow-wrap: break-word;
+		width: 35em; }
+	.Formats {
+		min-width: 15em; }
+	.footer, .heading, .subtitle {
+		text-align: center; }
+	.table {
+		width: 100%; }
+}
