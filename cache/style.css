@@ -157,7 +157,7 @@
 		margin-top: 1em; }
 	.error-head, .subheading, .th {
 		padding-bottom: 0.5em; }
-	.Name, .t_show {
+	.Name, .t_show, .error-txt {
 		padding-bottom: 1em; }
 	.Episodes, .Formats, .Length, .Name, .Pages, .Publisher, .Subscribe, .th, .Year {
 		padding-left: 1em;
