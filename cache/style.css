@@ -1,23 +1,17 @@
 @font-face {
 	font-family:'Merriweather';
-	src:local('Merriweather Regular'),
-		url('fonts/Merriweather-Regular.woff2') format('woff2'),
-		url('fonts/Merriweather-Regular.woff') format('woff');
+	src:local('Merriweather Regular'), url('fonts/Merriweather-Regular.woff2') format('woff2');
 	font-display: swap;
 }
 @font-face {
 	font-family:'Merriweather';
-	src:local('Merriweather Bold'),
-		url('fonts/Merriweather-Bold.woff2') format('woff2'),
-		url('fonts/Merriweather-Bold.woff') format('woff');
+	src:local('Merriweather Bold'), url('fonts/Merriweather-Bold.woff2') format('woff2');
 	font-display: swap;
 	font-weight: bold;
 }
 @font-face {
 	font-family:'Merriweather';
-	src:local('Merriweather Italic'),
-		url('fonts/Merriweather-Italic.woff2') format('woff2'),
-		url('fonts/Merriweather-Italic.woff') format('woff');
+	src:local('Merriweather Italic'), url('fonts/Merriweather-Italic.woff2') format('woff2');
 	font-display: swap;
 	font-style: italic;
 }
